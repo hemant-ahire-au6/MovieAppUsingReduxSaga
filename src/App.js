@@ -13,10 +13,11 @@ function App(){
 
    const [searchTerm,setSearchTerm]= useState("")
 
+//    const getMoviesData = useCallback(()=> dispatch(getMovies()),[] )
+
    useEffect(()=>{
-       
-        dispatch(getMovies())
-   },[])
+    dispatch(getMovies())
+   },[dispatch])
 
    const handleOnSubmit = (e) =>{
        e.preventDefault()
