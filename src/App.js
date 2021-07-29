@@ -16,7 +16,7 @@ function App(){
    useEffect(()=>{
        
         dispatch(getMovies())
-   })
+   },[])
 
    const handleOnSubmit = (e) =>{
        e.preventDefault()
