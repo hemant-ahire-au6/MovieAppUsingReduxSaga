@@ -1,5 +1,5 @@
-import {GET_MOVIES_SUCCESS,GET_MOVIES,GET_MOVIES_FAILURE, SEARCH_MOVIES} from "../action/constant"
-import {getMovies,getMoviesSuccess,getMoviesFailure, searchMovieSucess} from "../action/action"
+import {GET_MOVIES, SEARCH_MOVIES} from "../action/constant"
+import {getMoviesSuccess,getMoviesFailure, searchMovieSucess} from "../action/action"
 import {getMoviesApi,searchMovieApi} from "../../API/api"
 
 import { call, put, takeEvery ,all} from "redux-saga/effects"
