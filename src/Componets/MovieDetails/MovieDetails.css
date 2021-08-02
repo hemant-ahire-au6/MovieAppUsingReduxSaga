@@ -1,0 +1,36 @@
+.container-fluid{
+    display: flex;
+    background-color: rgb(102, 51, 150);
+    opacity: 0.8;
+    width: 100%;
+    height: 80vh;
+    margin: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.image{
+    background-color: black;
+    height: 65vh;
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.image img{
+height: 100%;
+width: 100%;
+}
+
+.main-content{
+ 
+    height: 50vh;
+    width: 20%;
+    flex-grow: 1;
+    margin-top: 50px;
+    margin-left: 20px;
+    color: white;
+}

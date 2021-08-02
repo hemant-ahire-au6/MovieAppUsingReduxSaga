@@ -18,3 +18,20 @@ export const searchMovieApi = (searchTerm)=>{
     .then((json) => json)
     .catch((error) => Promise.reject(error));
 }
+
+export const getMovieDetailsApi = (id)=>{
+    return fetch (`
+    https://api.themoviedb.org/3/movie/${id}?api_key=7d69b76bbb69c83b9dff51943d6520e7&language=en-US`)
+    .then ( res => res.json())
+    .then(data => data)
+    .catch (error => Promise.reject(error))
+}
+
+export const getMovieCreditsApi = (id)=>{
+    console.log(id)
+    return fetch (`
+    https://api.themoviedb.org/3/movie/${id}/credits?api_key=7d69b76bbb69c83b9dff51943d6520e7&language=en-US`)
+    .then ( res => res.json())
+    .then(data => data)
+    .catch (error => Promise.reject(error))
+}
