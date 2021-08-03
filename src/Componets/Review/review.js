@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { useSelector } from "react-redux"
 import { Card, Row, Col } from "react-bootstrap"
 import moment from 'moment';
@@ -6,7 +6,7 @@ import "./review.css"
 
 
 function Review() {
-    const [isReadMore,setIsReadMore] = useState(true)
+    const isReadMore = true
     const review = useSelector(state => state.movieReviews.results)
 
   const reviewData = review ?review:[] 
