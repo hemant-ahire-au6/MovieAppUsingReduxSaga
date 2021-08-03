@@ -28,9 +28,25 @@ export const getMovieDetailsApi = (id)=>{
 }
 
 export const getMovieCreditsApi = (id)=>{
-    console.log(id)
     return fetch (`
     https://api.themoviedb.org/3/movie/${id}/credits?api_key=7d69b76bbb69c83b9dff51943d6520e7&language=en-US`)
+    .then ( res => res.json())
+    .then(data => data)
+    .catch (error => Promise.reject(error))
+}
+
+
+export const getMovieReviewApi = (id)=>{
+    return fetch (`
+    https://api.themoviedb.org/3/movie/${id}/reviews?api_key=7d69b76bbb69c83b9dff51943d6520e7&language=en-US`)
+    .then ( res => res.json())
+    .then(data => data)
+    .catch (error => Promise.reject(error))
+}
+
+export const getMovieVideoApi = (id)=>{
+    return fetch (`
+    https://api.themoviedb.org/3/movie/${id}/videos?api_key=7d69b76bbb69c83b9dff51943d6520e7&language=en-US`)
     .then ( res => res.json())
     .then(data => data)
     .catch (error => Promise.reject(error))

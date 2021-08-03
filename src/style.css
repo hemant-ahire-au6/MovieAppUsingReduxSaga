@@ -1,11 +1,5 @@
 .movie{
-  background-color: #373b69;
-  border-radius: 3px;
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
-  overflow: hidden;
-  position: relative;
-  width: 300px;
-  margin: 1rem;
+
 }
 
 
@@ -23,10 +17,10 @@
 }
 
 .movie-info{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem; */
 }
 
 .movie-info h3{
@@ -72,4 +66,19 @@ header{
 
 .form{
   align-items: center;
+}
+
+.image-div{
+  display: flex;
+  overflow-x: auto;
+  overflow-y:hidden;
+}
+
+.movie1{
+  height: 300px;
+  margin: 10px;
+}
+
+.movie1 img{
+  height: 80%;
 }

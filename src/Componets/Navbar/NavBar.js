@@ -1,6 +1,5 @@
 import React, {useEffect } from 'react'
-import Movie from "../Movie"
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { getMovies} from '../../redux/action/action';
 import { Navbar, NavDropdown, Container, Nav} from 'react-bootstrap';
 import "./NavBar.css"
@@ -13,7 +12,7 @@ import SearchBar from '../SearchBar/SearchBar';
 
 function NavBar() {
     const dispatch = useDispatch()
-    const movies = useSelector(state => state.movies)
+    // const movies = useSelector(state => state.movies)
 
     // const [searchTerm, setSearchTerm] = useState("")
 
@@ -75,11 +74,11 @@ function NavBar() {
             </Navbar>
             <SearchBar/>
 
-            <div className="movie-container">
+            {/* <div className="movie-container">
                 {movies.map(movie => {
                     return <Movie key={movie.id} data={movie} />
                 })}
-            </div>
+            </div> */}
 
         </>
     )

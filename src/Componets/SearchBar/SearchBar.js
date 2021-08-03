@@ -35,7 +35,7 @@ function SearchBar() {
                         value={searchTerm}
                         onChange={handleOnChange}
                     />
-                    <Button variant="secondary">Secondary</Button>
+                    <Button variant="secondary">Search</Button>
                 </form>
             </header>
         </div>

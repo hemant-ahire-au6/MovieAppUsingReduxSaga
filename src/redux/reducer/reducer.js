@@ -1,4 +1,4 @@
-import {GET_MOVIES_FAILURE,GET_MOVIES_SUCCESS,GET_MOVIES, SEARCH_MOVIES, SEARCH_MOVIES_SUCCESS, GET_MOVIE_DETAILS, GET_MOVIE_DETAILS_SUCESS, GET_CAST_AND_CREW} from "../action/constant"
+import * as types from "../action/constant"
 
 
 const initialState = {
@@ -6,53 +6,67 @@ const initialState = {
     searchMovies:[],
     error:"",
     movieDetails:[],
-    caseAndCrew:[]
+    castAndCrew:[],
+    movieReviews:[],
+    movieVideos:[]
 }
 
 const reducer = (state=initialState,action)=>{
     switch (action.type){
 
-        case GET_MOVIES:
+        case types.GET_MOVIES:
             return{
                 ...state
             }
-        case GET_MOVIES_SUCCESS:
+        case types.GET_MOVIES_SUCCESS:
             return {
                 ...state,
                 movies:action.payload
             }
-        case GET_MOVIES_FAILURE:
+        case types.GET_MOVIES_FAILURE:
             return {
                 ...state,
                 error:action.payload
             }
 
-        case SEARCH_MOVIES:
+        case types.SEARCH_MOVIES:
             return {
                 ...state
             }
 
-        case SEARCH_MOVIES_SUCCESS:
+        case types.SEARCH_MOVIES_SUCCESS:
             return {
                 ...state,
                 movies:action.payload
             }
 
-        case GET_MOVIE_DETAILS:
+        case types.GET_MOVIE_DETAILS:
             return {
                 ...state
             }
 
-        case GET_MOVIE_DETAILS_SUCESS:
+        case types.GET_MOVIE_DETAILS_SUCESS:
             return {
                 ...state,
                 movieDetails:action.payload
             }
 
-        case GET_CAST_AND_CREW:
+        case types.GET_CAST_AND_CREW:
             return {
                 ...state,
-                caseAndCrew:action.payload
+                castAndCrew:action.payload
+            }
+        
+        case types.GET_MOVIE_REVIEW:
+            return {
+                ...state,
+                movieReviews:action.payload
+            }
+
+        case types.GET_MOVIE_VIDEOS:
+            return {
+                ...state,
+                movieVideos:action.payload
             }
 
         default:

@@ -5,6 +5,8 @@ import {
     GET_MOVIES_SUCCESS, 
     GET_MOVIE_DETAILS, 
     GET_MOVIE_DETAILS_SUCESS, 
+    GET_MOVIE_REVIEW, 
+    GET_MOVIE_VIDEOS, 
     SEARCH_MOVIES, 
     SEARCH_MOVIES_SUCCESS} from './constant'
 
@@ -62,6 +64,20 @@ export const getMovieDetailsSuccess = (payload)=>{
 export const getCastAndCrew = (payload) =>{
     return {
         type:GET_CAST_AND_CREW,
+        payload:payload
+    }
+}
+
+export const getMovieReview = (payload) =>{
+    return {
+        type:GET_MOVIE_REVIEW,
+        payload:payload
+    }
+}
+
+export const getMovieVideos = (payload)=>{
+    return {
+        type:GET_MOVIE_VIDEOS,
         payload:payload
     }
 }

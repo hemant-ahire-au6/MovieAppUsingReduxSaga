@@ -1,6 +1,6 @@
 import {GET_MOVIES, SEARCH_MOVIES,GET_MOVIE_DETAILS} from "../action/constant"
-import {getMoviesSuccess,getMoviesFailure, searchMovieSucess,getMovieDetailsSuccess,getCastAndCrew} from "../action/action"
-import {getMoviesApi,searchMovieApi,getMovieDetailsApi,getMovieCreditsApi} from "../../API/api"
+import {getMoviesSuccess,getMoviesFailure, searchMovieSucess,getMovieDetailsSuccess,getCastAndCrew,getMovieReview, getMovieVideos} from "../action/action"
+import {getMoviesApi,searchMovieApi,getMovieDetailsApi,getMovieCreditsApi,getMovieReviewApi, getMovieVideoApi} from "../../API/api"
 
 import { call, put, takeEvery ,all} from "redux-saga/effects"
 
@@ -27,12 +27,17 @@ function* getMovieDetailsWatcherSaga(){
 function* getMovieDetails(action){
   
     const movieDetails = yield call(getMovieDetailsApi,action.payload)
-
-    const castAndCrue = yield call(getMovieCreditsApi,action.payload)
     
-    yield put(getMovieDetailsSuccess(movieDetails))
+    const castAndCrue = yield call(getMovieCreditsApi,action.payload)
 
+    const movieReview = yield call (getMovieReviewApi,action.payload)
+
+    const movieVideos = yield call (getMovieVideoApi,action.payload)
+
+    yield put(getMovieDetailsSuccess(movieDetails))
     yield put(getCastAndCrew(castAndCrue))
+    yield put(getMovieReview(movieReview))
+    yield put(getMovieVideos(movieVideos))
 }
 
 
