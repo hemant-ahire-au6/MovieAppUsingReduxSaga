@@ -11,6 +11,8 @@ export const getMoviesApi = () => {
         .catch((error) => Promise.reject(error));
     };
 
+    
+
 
 export const searchMovieApi = (searchTerm)=>{
     return fetch(SEARCH_API+searchTerm)

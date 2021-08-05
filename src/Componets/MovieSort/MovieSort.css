@@ -1,0 +1,5 @@
+.image-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "../Componets/HomePage/HomePage";
 import MovieDetails from "../Componets/MovieDetails/MovieDetails";
+import MovieSort from '../Componets/MovieSort/MovieSort'
 
 const ROUTES = [
   { path: "/", 
@@ -33,6 +34,10 @@ const ROUTES = [
       }
     ],
   },
+  { path: "/Movie", 
+  key: "ROOT", 
+  exact: true, 
+  component: () =><MovieSort/> }
 ];
 
 export default ROUTES;

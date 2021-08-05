@@ -13,6 +13,7 @@ function* movieSearchWatcherSaga(){
 }
 
 function* movieSearchSaga(action){
+    
     const data = yield call(searchMovieApi,action.payload)
 
     yield put(searchMovieSucess(data.results))

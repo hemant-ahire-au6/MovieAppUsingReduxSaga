@@ -7,8 +7,15 @@ import {
     GET_MOVIE_DETAILS_SUCESS, 
     GET_MOVIE_REVIEW, 
     GET_MOVIE_VIDEOS, 
+    POPULARITY_ASCENDING, 
+    POPULARITY_DECENDING, 
+    RATING_ASCENDING, 
+    RATING_DECENDING, 
+    RELEASE_DATE_ASCENDING, 
+    RELEASE_DATE_DECENDING, 
     SEARCH_MOVIES, 
-    SEARCH_MOVIES_SUCCESS} from './constant'
+    SEARCH_MOVIES_SUCCESS,
+    TITLE_A_TO_Z} from './constant'
 
 export const getMovies = (payload)=>{
     return {
@@ -79,5 +86,48 @@ export const getMovieVideos = (payload)=>{
     return {
         type:GET_MOVIE_VIDEOS,
         payload:payload
+    }
+}
+
+export const getPopularityDecending = ()=>{
+    return {
+        type:POPULARITY_DECENDING
+    }
+}
+
+export const getPopularityAscending = ()=>{
+    return {
+        type:POPULARITY_ASCENDING
+    }
+}
+
+export const getRatingDecending = ()=>{
+    return {
+        type:RATING_DECENDING
+    }
+}
+
+export const getRatingAscending = ()=>{
+    return {
+        type:RATING_ASCENDING
+    }
+}
+
+export const getReleaseDateAscending = ()=>{
+    return {
+        type:RELEASE_DATE_ASCENDING
+    }
+}
+
+export const getReleaseDateDecending = ()=>{
+    return {
+        type:RELEASE_DATE_DECENDING
+    }
+}
+
+
+export const getAtoZ = ()=>{
+    return {
+        type:TITLE_A_TO_Z
     }
 }

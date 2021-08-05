@@ -1,9 +1,6 @@
-import React, {useEffect } from 'react'
-import { useDispatch} from 'react-redux';
-import { getMovies} from '../../redux/action/action';
+import React from 'react'
 import { Navbar, NavDropdown, Container, Nav} from 'react-bootstrap';
 import "./NavBar.css"
-import SearchBar from '../SearchBar/SearchBar';
 
 
 // APi key :7d69b76bbb69c83b9dff51943d6520e7
@@ -11,31 +8,12 @@ import SearchBar from '../SearchBar/SearchBar';
 
 
 function NavBar() {
-    const dispatch = useDispatch()
-    // const movies = useSelector(state => state.movies)
+    // const dispatch = useDispatch()
 
-    // const [searchTerm, setSearchTerm] = useState("")
+    // useEffect(() => {
+    //     dispatch(getMovies())
+    // }, [dispatch])
 
-    //    const getMoviesData = useCallback(()=> dispatch(getMovies()),[] )
-
-    useEffect(() => {
-        dispatch(getMovies())
-    }, [dispatch])
-
-    // const handleOnSubmit = (e) => {
-    //     e.preventDefault()
-
-    //     if (searchTerm) {
-    //         dispatch(searchMovies(searchTerm))
-
-    //         setSearchTerm("")
-    //     }
-    // }
-
-    // const handleOnChange = (e) => {
-    //     setSearchTerm(e.target.value)
-
-    // }
 
     return (
         <>
@@ -47,38 +25,28 @@ function NavBar() {
                         <Nav className="me-auto">
 
                             <NavDropdown title="Movie" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Popular</NavDropdown.Item>
+                                <NavDropdown.Item href="movie">Popular</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">upcoming</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-
                             </NavDropdown>
+
                             <NavDropdown title="Tv Shows" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Popular</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">upcoming</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             </NavDropdown>
+
                             <NavDropdown title="People" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Popular</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">upcoming</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
-                        {/* <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
-                        </Nav> */}
+                     
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <SearchBar/>
 
-            {/* <div className="movie-container">
-                {movies.map(movie => {
-                    return <Movie key={movie.id} data={movie} />
-                })}
-            </div> */}
 
         </>
     )

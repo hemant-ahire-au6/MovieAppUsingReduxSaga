@@ -8,7 +8,11 @@ function ImagesDiv() {
     const dispatch = useDispatch()
     const movies = useSelector(state => state.movies)
 
-
+    // const sortData = movies.sort((a,b)=>{
+    //     return b.popularity -a.popularity
+    // })
+    // console.log(sortData)
+    
     useEffect(() => {
         dispatch(getMovies())
     }, [dispatch])
@@ -23,4 +27,5 @@ function ImagesDiv() {
     )
 }
 
-export default ImagesDiv
+export default ImagesDiv;
+
